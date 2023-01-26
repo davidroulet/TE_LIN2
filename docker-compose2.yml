@@ -5,9 +5,7 @@ services:
  server:
   tty: true
   image: kidji/te-server:latest
-  build:
-    context: ./api-server/
-    dockerfile: Dockerfile
+
   container_name: te-server
   ports:
    - "5001:5001"
@@ -17,9 +15,7 @@ services:
 
  client:
   image: kidji/te-client:latest
-  build:
-    context: ./api-server/
-    dockerfile: Dockerfile
+
   container_name: te-client
   tty: true
   ports:

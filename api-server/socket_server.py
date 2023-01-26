@@ -3,12 +3,12 @@ import socket
 
 def server_program():
     # get the hostname
-    host = "10.12.0.3" 
+    host = "10.13.0.3" 
     port = 5001  # initiate port no above 1024
 
     server_socket = socket.socket()  # get instance
     # look closely. The bind() function takes tuple as argument
-    server_socket.bind((host, 5001))  # bind host address and port together
+    server_socket.bind((host, port))  # bind host address and port together
 
     # configure how many client the server can listen simultaneously
     server_socket.listen(2)
